@@ -1,0 +1,14 @@
+<ion-view title="main">
+  <div class="bar bar-header bar-positive">
+    <h1 class="title">Teams</h1>
+  </div>
+  <ion-content class="has-header" ng-init="allTeams()">
+    <div class="list">
+      <a class="item item-avatar" collection-repeat='team in teams' ng-click="getTeam(team._links.self.href)" href="#/teamdetail">
+        <img src="{{team.crestUrl}}">
+        <h2>{{team.name}}</h2>
+        <p>{{team.squadMarketValue}}</p>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

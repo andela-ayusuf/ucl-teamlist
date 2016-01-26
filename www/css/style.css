@@ -1,1 +1,13 @@
 /* Empty. Add your own CSS if you like */
+.starter-pic {
+  background: url('../img/bg.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.badge {
+  width: 100%;
+}
+.badge img {
+  max-width: 120px;
+}

@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic', 'ui.router'])
+var app = angular.module('starter', ['ionic', 'ui.router'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -28,34 +28,37 @@ angular.module('starter', ['ionic', 'ui.router'])
   $stateProvider
     .state('landing', {
       url: '/',
-      templateUrl: 'app/views/landing.view.html',
+      templateUrl: '../views/landing.html',
       controller: ''
     })
-    .state('teamdetails', {
-      url: '/teamdetails',
-      templateUrl: 'app/views/teamdetails.view.html',
-      controller: ''
+    .state('teams', {
+      url: '/teams',
+      templateUrl: '../views/teams.html',
+      controller: 'TeamCtrl'
     })
-    .state('players', {
+    .state('teamdetail', {
+      url: '/teamdetail',
+      templateUrl: '../views/teamdetail.html',
+      controller: 'TeamCtrl'
+    })
+    .state('teamdetail.players', {
       url: '/players',
-      templateUrl: 'app/views/players.view.html',
-      controller: ''
+      views: {
+       'teamdetail-player': {
+         templateUrl: '../views/players.html',
+         controller: 'TeamCtrl'
+         }
+       }
     })
-    .state('playerdetails', {
-      url: '/playerdetails',
-      templateUrl: 'app/views/playerdetails.view.html',
-      controller: ''
-    })
-    .state('fixtures', {
+    .state('teamdetail.fixtures', {
       url: '/fixtures',
-      templateUrl: 'app/views/fixtures.view.html',
-      controller: ''
+      views: {
+       'teamdetail-player': {
+         templateUrl: '../views/fixtures.html',
+         controller: 'TeamCtrl'
+         }
+       }
     });
 
     $urlRouterProvider.otherwise('/');
-    $locationProvider.html5Mode(true);
 }]);
-
-
-
-
