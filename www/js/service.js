@@ -6,7 +6,16 @@ app.factory('TeamService', ['$http', function($http) {
     },
     getTeam: function(apiUrl) {
       return $http.get(apiUrl);
-    }
+    },
+    getPlayers: function(apiUrl) {
+    	return $http.get(apiUrl);
+    },
+    getFixtures: function(apiUrl) {
+    	return $http.get(apiUrl);
+    },
+    getPlayerDetails: function(apiUrl) {
+    	return $http.get(apiUrl);
+    },
   };
 
  }]);

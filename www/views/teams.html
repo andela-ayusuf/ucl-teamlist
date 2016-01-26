@@ -6,8 +6,8 @@
     <div class="list">
       <a class="item item-avatar" collection-repeat='team in teams' ng-click="getTeam(team._links.self.href)" href="#/teamdetail">
         <img src="{{team.crestUrl}}">
-        <h2>{{team.name}}</h2>
-        <p>{{team.squadMarketValue}}</p>
+        <h2 ng-bind='team.name'></h2>
+        <p ng-bind='team.squadMarketValue'></p>
       </a>
     </div>
   </ion-content>

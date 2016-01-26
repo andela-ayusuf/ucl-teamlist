@@ -41,23 +41,20 @@ var app = angular.module('starter', ['ionic', 'ui.router'])
       templateUrl: '../views/teamdetail.html',
       controller: 'TeamCtrl'
     })
-    .state('teamdetail.players', {
+    .state('players', {
       url: '/players',
-      views: {
-       'teamdetail-player': {
-         templateUrl: '../views/players.html',
-         controller: 'TeamCtrl'
-         }
-       }
+       templateUrl: '../views/players.html',
+       controller: 'TeamCtrl'
     })
-    .state('teamdetail.fixtures', {
+    .state('playerdetails', {
+      url: '/playerdetails',
+       templateUrl: '../views/playerdetails.html',
+       controller: 'TeamCtrl'
+    })
+    .state('fixtures', {
       url: '/fixtures',
-      views: {
-       'teamdetail-player': {
-         templateUrl: '../views/fixtures.html',
-         controller: 'TeamCtrl'
-         }
-       }
+       templateUrl: '../views/fixtures.html',
+       controller: 'TeamCtrl'
     });
 
     $urlRouterProvider.otherwise('/');

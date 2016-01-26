@@ -1,7 +1,14 @@
 <ion-view title="main">
+  <div class="bar bar-header bar-positive">
+    <h1 class="title">{{ team.name }}</h1>
+  </div>
   <ion-content class="has-header" ng-init="allTeams()">
-    <div class="list">
-      <p>players</p>
+    <div class="list" collection-repeat='player in players' ng-click="getPlayerDetails(team._links.players.href)" >
+      <a class="item item-icon-left">
+      	<i class="icon ion-person"></i>
+      	<h2 ng-bind='player.name'></h2>
+      	<p ng-bind='player.position'></p>
+      </a>
     </div>
   </ion-content>
 </ion-view>

@@ -1,0 +1,34 @@
+<ion-view title="main">
+  <div class="bar bar-header bar-positive">
+    <h1 class="title">{{ player.name }}</h1>
+  </div>
+  <ion-content class="has-header" ng-init="allTeams()">
+    <div class="list" collection-repeat="player in players">
+      <a class="item item-icon-left">
+      	<i class="icon ion-person"></i>
+      	<h2 ng-bind='player.name'></h2>
+      	<p ng-bind='player.position'></p>
+      </a>
+      <!-- <p class="item item-icon-left">
+      	<i class="icon ion-ios-football"></i>
+      	{{player.position}}
+      </p>
+      <p class="item item-icon-left">
+      	<i class="icon ion-tshirt"></i>
+      	{{player.jerseyNumber}}
+      </p>
+      <p class="item item-icon-left">
+      	<i class="icon ion-android-calendar"></i>
+      	{{player.dateOfBirth}}
+      </p>
+      <p class="item item-icon-left">
+      	<i class="icon ion-cash"></i>
+      	{{player.marketValue}}
+      </p>
+      <p class="item item-icon-left">
+      	<i class="icon ion-ios-flag"></i>
+      	{{player.nationality}}
+      </p> -->
+    </div>
+  </ion-content>
+</ion-view>
